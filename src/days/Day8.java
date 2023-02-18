@@ -40,6 +40,7 @@ public class Day8 {
 				for (int y = j - 1; y > -1; y--) {
 					if (forest.get(y).get(i) >= forest.get(j).get(i)) {
 						isVisible = false;
+						break;
 					}
 				}
 				if (isVisible) {
@@ -52,6 +53,7 @@ public class Day8 {
 				for (int y = j + 1; y < forest.size(); y++) {
 					if (forest.get(y).get(i) >= forest.get(j).get(i)) {
 						isVisible = false;
+						break;
 					}
 				}
 				if (isVisible) {
@@ -64,6 +66,7 @@ public class Day8 {
 				for (int x = i + 1; x < forest.get(0).size(); x++) {
 					if (forest.get(j).get(x) >= forest.get(j).get(i)) {
 						isVisible = false;
+						break;
 					}
 				}
 				if (isVisible) {
@@ -76,6 +79,7 @@ public class Day8 {
 				for (int x = i - 1; x > -1; x--) {
 					if (forest.get(j).get(x) >= forest.get(j).get(i)) {
 						isVisible = false;
+						break;
 					}
 				}
 				if (isVisible) {
